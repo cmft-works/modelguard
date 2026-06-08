@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: modelguard-ai
+    runtime: docker
+    plan: free
+    autoDeploy: true
+    envVars:
+      - key: DATABASE_URL
+        value: sqlite:///./modelguard.db
+      - key: PORT
+        value: 8000
